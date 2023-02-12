@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/66ff231c87.js" crossorigin="anonymous"></script>
+    <script src="script.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Order App</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="scroller">
+            <header>
+                <div class="header-container"></div>
+                Ramen's show
+                <span>Discover the flavors of Japan</span>
+            </header>
+            <main>
+                <div id="menu">
+                </div>
+                <div class="your-order hidden">
+                    <h3>Your order</h3>
+                    <ul id="order-list">
+                    </ul>
+                </div>
+                <div class="cancel-background"></div>
+                <div class="payment-modal hidden">
+                    <img class="close-pay" src="./img/close.png"/>   
+                    <h3>Enter card details</h3>
+                    <form method="GET" id="payment">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="text" name="cardNumber" placeholder="Enter card number" required>
+                        <input type="text" name="CVV" placeholder="Enter CVV" required>
+                        <button id="pay">Pay</button>
+                    </form>
+                </div>
+            </main>
+            <footer>
+    
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

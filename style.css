@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto:wght@400;700;900&family=Solitreo&display=swap');
+/*
+font-family: 'Itim', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Solitreo', cursive;
+*/
+.inactive {
+    opacity: 0.7 !important;
+}
+.hidden {
+    display: none !important;
+}
+.block {
+    display: block !important;
+}
+.cancel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    display: none;
+}
+.inactive:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Itim', cursive;
+    display: flex;
+}
+.main-container {
+    position: relative;
+    margin: auto;
+    height: 600px;
+    width: 400px;
+    box-sizing: border-box;
+    border: 1px solid #201D1C;
+    box-shadow: 1px 1px 20px black;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.main-container::-webkit-scrollbar {
+    width: 10px;
+}
+.main-container::-webkit-scrollbar-track {
+    background: #EC7E1E;
+    border-left: 0px solid white;
+    border-right: 0px solid white;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.main-container::-webkit-scrollbar-thumb {
+    background: black;
+    border-left: 7px solid #F9A05F;
+    border-right: 7px solid #F9A05F;
+    border-radius: 0px 4px 4px 0px;
+}
+.scroller {
+    height: 100%;
+    width: 100%;
+}
+header {
+    position: relative;
+    background-image: url(img/sushi.jpg);
+    background-position: 0px -60px;
+    background-size: cover;
+    height: 150px;
+    padding: 0 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Solitreo', cursive;
+    font-size: 20px;
+    line-height: 15px;
+    text-shadow: 1px 1px 5px #07080A;
+}
+.header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #07080A;
+    opacity: 0.1;
+}
+header span {
+    font-family: 'Itim', cursive;
+    font-size: 12px;
+}
+main {
+    position: relative;
+}
+.item {
+    width: 100%;
+    display: flex;
+    padding: 30px 20px;
+    gap: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #00000021;
+}
+.item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.item-presentation {
+   display: flex;
+   flex-direction: column; 
+   justify-content: space-between;
+   width: 100%;
+}
+.item h3 {
+    margin: 2px 0;
+    font-size: 20px;
+}
+.item .details {
+    font-size: 12px;
+    padding: 5px;
+    background-color: #F9A05F;
+    align-self: self-start;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000;
+    transition: 0.4s all;
+}
+.price {
+    font-size: 15px;
+    color: #999;
+}
+.quantity {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:space-between;
+    align-items: flex-end;
+    color: #999;
+}
+.decrement , .increment {
+    border: 1px solid #999;
+    border-radius: 5px;
+    background-color: #F9A05F;
+    transition: 0.4s all;
+}
+.decrement img, .increment img {
+    width: 15px;
+    height: 15px;
+    padding: 2.5px;
+}
+.number-items {
+    padding: 0px 5px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    opacity: 0.6;
+}
+.more-details , .payment-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #F9A05F;
+    border-radius: 5px;
+    width: 350px;
+    box-shadow: 1px 1px 10px #000;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+.more-details .close , .payment-modal .close-pay {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+}
+.more-details h3 {
+    font-size: 25px;
+    text-align: center;
+}
+.more-details .details-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.desc {
+    margin-bottom: 5px;
+    text-justify:inter-word
+}
+.ingredients {
+    font-size: 14px;
+    opacity: 0.8;
+}
+.more-details .quantity {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+}
+.more-details .decrement, .more-details .increment {
+    border-color: #201D1C;
+}
+.more-details .decrement img, .more-details .increment img {
+    opacity: 1;
+}
+.your-order h3 {
+    text-align: center;
+    padding: 15px 0 5px 0;
+}
+.your-order #order-list {
+    padding: 0 20px 30px 20px;
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.your-order #order-list li {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+.your-order #order-list li .quantity {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    align-items: center;
+}
+.your-order .decrement, .your-order .increment {
+    padding: 1px;
+}
+.your-order .decrement img, .your-order .increment img {
+    width: 12px;
+    height: 12px;
+}
+.your-order .number-items {
+    padding: 0 2px;
+    font-size: 15px;
+    line-height: 10px;
+    border: 0;
+}
+.your-order .price {
+    width: 100%;
+    text-align: right;
+}
+.total-price {
+    border-top: 1px solid black;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+.your-order #order-list li.order {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+    background-color: #EC7E1E;
+    color: white;
+    transition: 0.4s all;
+}
+.decrement:hover , .increment:hover , .details:hover , .your-order #order-list li.order:hover {
+    box-shadow: 1px 1px 4px #000;
+    transform: scale(1.05);
+}
+.your-order #order-list li.order:hover {
+    transform: scale(1.01);
+}
+.payment-modal {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+.payment-modal form {
+    width: 90%;
+}
+.payment-modal input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #EC7E1E;
+    box-shadow: 1px 1px 3px #EC7E1E;
+}
+.payment-modal input:focus-visible {
+    box-shadow: 1px 1px 2px black;
+    outline: 0;
+}
+.payment-modal button {
+    background-color: #EC7E1E;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border: 0;
+    box-shadow: 1px 1px 3px black;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+    color: white;
+}
+@media screen and (max-width:600px) {
+    .main-container {
+        height: auto;
+        width: 100%;
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
