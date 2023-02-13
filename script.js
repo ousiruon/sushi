@@ -254,16 +254,16 @@ window.addEventListener('load',()=> {
         const paymentModal = document.querySelector('.payment-modal');
         cancelBackground.classList.toggle('block');
         paymentModal.classList.toggle('hidden');
-        paymentModal.innerHTML =
+        paymentModal.innerHTML = 
         `
-            <img class="close-pay" src="./img/close.png"/>   
-            <h3>Enter card details</h3>
-            <form method="GET" id="payment">
-                <input type="text" name="name" placeholder="Enter your name" required>
-                <input type="number" name="cardNumber" placeholder="Enter card number" required>
-                <input type="number" name="CVV" placeholder="Enter CVV" required>
-                <button id="pay">Pay</button>
-            </form>
+        <img class="close-pay" src="./img/close.png"/>   
+        <h3>Enter card details</h3>
+        <form method="GET" id="payment">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="number" name="cardNumber" placeholder="Enter card number" required>
+            <input type="number" name="CVV" placeholder="Enter CVV" required>
+            <button id="pay">Pay</button>
+        </form>
         `;
     }
     function coreApp (e) {
