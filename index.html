@@ -26,7 +26,14 @@
                 </div>
                 <div class="cancel-background"></div>
                 <div class="payment-modal hidden">
-                    
+                    <img class="close-pay" src="./img/close.png"/>   
+                    <h3>Enter card details</h3>
+                    <form method="GET" id="payment">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="number" name="cardNumber" placeholder="Enter card number" required>
+                        <input type="number" name="CVV" placeholder="Enter CVV" required>
+                        <button id="pay">Pay</button>
+                    </form>
                 </div>
             </main>
             <footer>
